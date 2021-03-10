@@ -1,5 +1,6 @@
 body
 {
+    font-family: "CenturyGothic";
     margin: 0;
     color: #000;
     background: #fff;
@@ -21,10 +22,173 @@ a
     text-decoration: none;
 }
 
-button
+button, input
 {
     outline: none;
 }
 
+button, a
+{
+    cursor: pointer;
+}
+
+.soc__wrapper
+{
+    display: flex;
+    .inst
+    {
+        width: 29px;
+        height: 28px;
+        background: url(../images/icons/inst.png);
+    }
+
+    .vk
+    {
+        width: 28px;
+        height: 28px;
+        background: url(../images/icons/vk.png);
+    }
+
+    a
+    {
+        display: block;
+        margin-right: 15px;
+        transition: 0.3s;
+    }
+
+    a:last-of-type
+    {
+        margin-right: 0;
+    }
+
+    a:hover
+    {
+        transform: scale(0.9);
+    }
+}
+
+.how__to__get 
+{
+    color: #264e9d;
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+    transition: 0.3s;
+
+    span
+    {
+        text-decoration: underline;
+    }
+}
+
+.how__to__get:after
+{
+    content: '';
+    width: 15px;
+    height: 18px;
+    background: url(../images/icons/geo.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.search__form
+{
+    width: 150px;
+    height: 27px;
+    position: relative;
+
+    input
+    {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid #82898f;
+        padding-left: 25px;
+        font-family: "CenturyGothic";
+    }
+
+    input::placeholder
+    {
+        color: #000;
+    }
+}
+
+.search__form:after
+{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/loupe.png);
+    left: 0;
+    top: 4px;
+}
+
+.schedule
+{
+    padding-left: 35px;
+    position: relative;
+    font-size: 14px;
+
+    span
+    {
+        display: block;
+    }
+}
+
+.schedule:after
+{
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: url(../images/icons/clock.png);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn
+{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid #ec7c25;
+    background: none;
+    transition: 0.3s;
+}
+
+.btn:hover
+{
+    background: #ec7c25;
+    color: #fff;
+}
+
+.container.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+
+    .col
+    {
+        display: flex;
+        width: 410px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @import 'responce';

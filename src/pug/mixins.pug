@@ -16,3 +16,26 @@ mixin InputRadio(name, label)
 mixin BtnMenu()
     button.btn__menu
         span
+
+mixin Navbar()
+    header
+        .container.navbar
+            .col
+                .soc__wrapper
+                    a(href="#").inst
+                    a(href="#").vk
+                a(href="#").how__to__get 
+                    span Как добраться
+                .search__form
+                    input(type="text" placeholder="Поиск по сайту...")
+            a(href="/").logo
+                img(src="assets/images/logo.png", alt="")
+            .col
+                .schedule
+                    span Ежедневно: 9:00 – 20:00
+                    span 
+                        +ContactPhone()
+                button.btn Обратная связь
+
+mixin ContactPhone()
+    |7 (8313) 13-55-65
