@@ -191,4 +191,43 @@ button, a
     }
 }
 
+header .menu__wrapper
+{
+    background-color: #4a1b09;
+    color: #fff;
+    padding: 7px 0;
+    .menu
+    {
+        list-style: none;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        a
+        {
+            position: relative;
+        }
+
+        a:after
+        {
+            content: '';
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-color: #fff;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        a:hover:after
+        {
+            width: 100%;
+        }
+    }
+}
+
 @import 'responce';

@@ -36,6 +36,29 @@ mixin Navbar()
                     span 
                         +ContactPhone()
                 button.btn Обратная связь
+        .menu__wrapper
+            .container
+                +Menu()
 
 mixin ContactPhone()
     |7 (8313) 13-55-65
+
+mixin Menu()
+    ul.menu
+        li
+            a(href="#") Главная
+        li
+            a(href="#") Магазин
+        li
+            a(href="#") Услуги
+        li
+            a(href="#") Акции
+        li
+            a(href="#") Новости
+        li
+            a(href="#") Арендаторам
+        li
+            a(href="#") О нас
+        li
+            a(href="#") Контакты
+
