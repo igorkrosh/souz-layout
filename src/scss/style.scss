@@ -348,4 +348,69 @@ section.slider
     }
 }
 
+section.souz__grid
+{
+    .grid__wrapper
+    {
+        display: grid;
+        grid-template-columns: repeat(21, 55px);
+        grid-auto-rows: 55px;
+    }
+
+    .grid__item
+    {
+        background: #4a1b09;
+        display: block;
+        margin: 15px;
+    }
+
+    .shops
+    {
+        grid-column: span 9;
+        grid-row: span 6;
+    }
+
+    .sale
+    {
+        grid-column: span 12;
+        grid-row: span 7;
+    }
+
+    .hot__to__get
+    {
+        grid-column: span 9;
+        grid-row: span 6;
+    }
+
+    .services
+    {
+        grid-column: span 6;
+        grid-row: span 5;
+    }
+
+    .about__us
+    {
+        grid-column: span 6;
+        grid-row: span 5;
+    }
+
+    .airplane
+    {
+        grid-column: span 7;
+        grid-row: span 7;
+    }
+
+    .news
+    {
+        grid-column: span 7;
+        grid-row: span 7;
+    }
+
+    .call
+    {
+        grid-column: span 7;
+        grid-row: span 7;
+    }
+}
+
 @import 'responce';
