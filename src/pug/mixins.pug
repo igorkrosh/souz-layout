@@ -41,7 +41,7 @@ mixin Navbar()
                 +Menu()
 
 mixin ContactPhone()
-    |7 (8313) 13-55-65
+    |+7 (8313) 13-55-65
 
 mixin Menu()
     ul.menu
@@ -62,3 +62,35 @@ mixin Menu()
         li
             a(href="#") Контакты
 
+mixin Footer()
+    footer
+        .container
+            .col
+                a(href="/").logo
+                    img(src="assets/images/logo.png", alt="")
+                .address
+                    span г.Дзержинск, <br> пр-т Циолковского, 76
+                a(href="#").policy Политика конфиденциальности
+            .col
+                .schedule
+                    span Ежедневно: 9:00 – 20:00
+                .soc__wrapper
+                    span Мы в соц. сетях
+                    a(href="#").inst
+                    a(href="#").vk
+            .col
+                +Menu()
+            .col
+                a(href="#").phone
+                    +ContactPhone()
+                .soc__wrapper.messengers
+                    a(href="#").viber
+                    a(href="#").whatsapp
+                    a(href="#").tg
+                button.btn Обратная связь
+                .copyright
+                    |Copyrigth 2021 - все права защищены. Копирование информации без указания источника запрещено
+                .salut
+                    span Разработка сайта - 
+                        a(href="https://salut-promo.ru/") SalutPromo
+                
