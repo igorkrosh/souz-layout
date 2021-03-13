@@ -353,63 +353,110 @@ section.souz__grid
     .grid__wrapper
     {
         display: grid;
-        grid-template-columns: repeat(21, 55px);
-        grid-auto-rows: 55px;
+        grid-template-columns: repeat(21, 4.5%);
+        grid-auto-rows: 70px;
+        justify-content: center;
+        margin-top: 10px;
     }
 
     .grid__item
     {
-        background: #4a1b09;
         display: block;
-        margin: 15px;
+        margin: 10px;
+        border-radius: 25px;
+        padding: 40px 30px;
+
+        .item__title
+        {
+            color: #4a1b09;
+            display: block;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        .item__subtitle
+        {
+            color: #4a1b09;
+            display: block;
+            margin-bottom: 30px;
+        }
     }
 
     .shops
     {
         grid-column: span 9;
         grid-row: span 6;
+        background: url(../images/mainpage_grid/1.jpg);
+        background-size: cover;
+        background-position-x: right;
+        background-position-y: bottom;
     }
 
     .sale
     {
         grid-column: span 12;
         grid-row: span 7;
+        background: url(../images/mainpage_grid/2.jpg);
+        background-size: cover;
+        background-position-x: right;
+        background-position-y: bottom;
     }
 
     .hot__to__get
     {
         grid-column: span 9;
         grid-row: span 6;
+        background: url(../images/mainpage_grid/3.jpg);
+        background-size: cover;
+        background-position-x: left;
+        background-position-y: bottom;
     }
 
     .services
     {
         grid-column: span 6;
         grid-row: span 5;
+        background: url(../images/mainpage_grid/4.jpg);
+        background-size: cover;
+        background-position-y: bottom;
     }
 
     .about__us
     {
         grid-column: span 6;
         grid-row: span 5;
+        background: url(../images/mainpage_grid/5.jpg);
+        background-size: cover;
+        background-position-y: bottom;
     }
 
     .airplane
     {
         grid-column: span 7;
-        grid-row: span 7;
+        grid-row: span 5;
+        background: url(../images/mainpage_grid/6.jpg);
+        background-size: cover;
+        background-position-y: bottom;
+        background-position-x: right;
     }
 
     .news
     {
         grid-column: span 7;
-        grid-row: span 7;
+        grid-row: span 5;
+        background: url(../images/mainpage_grid/7.jpg);
+        background-size: cover;
+        background-position-y: bottom;
+        background-position-x: left;
     }
 
     .call
     {
         grid-column: span 7;
-        grid-row: span 7;
+        grid-row: span 5;
+        background: url(../images/mainpage_grid/8.jpg);
+        background-size: cover;
+        background-position-y: bottom;
+        background-position-x: right;
     }
 }
 
