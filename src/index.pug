@@ -10,5 +10,35 @@ html(lang="ru")
         include pug/head.pug
     body
         +Navbar()
-
+        section.slider
+            .owl-carousel
+                .slider__item
+                    img(src="assets/images/slider/slide1.jpg", alt="").bg
+                    .container
+                        .col
+                            h1 Приглашаем на кофе
+                            .text 
+                                |Совершайте покупки и учавствуйте в розыгрыше 14 кофеварок и других классных призов!
+                            a(href="#").btn.orange подробности 
+                .slider__item
+                    img(src="assets/images/slider/slide1.jpg", alt="").bg
+                    .container
+                        .col
+                            h1 Приглашаем на кофе 2
+                            .text 
+                                |Совершайте покупки и учавствуйте в розыгрыше 14 кофеварок и других классных призов!
+                            a(href="#").btn.orange подробности 
+                .slider__item
+                    img(src="assets/images/slider/slide1.jpg", alt="").bg
+                    .container
+                        .col
+                            h1 Приглашаем на кофе 3
+                            .text 
+                                |Совершайте покупки и учавствуйте в розыгрыше 14 кофеварок и других классных призов!
+                            a(href="#").btn.orange подробности 
+            .container.slider__nav__wrapper
+                .slider__nav
+                    .nav
+                    .dots
+            
         include pug/scripts.pug
