@@ -5,6 +5,7 @@ function Core()
     SetTabSwitcher();
     SetModal();
     InitOwlCarousel();
+    SetMobileMenu();
 }
 
 function SetTabSwitcher()
@@ -107,4 +108,22 @@ function InitOwlCarousel()
         navContainer: '.slider__nav .nav',
         dotsContainer: '.slider__nav .dots'
     });
+}
+
+function SetMobileMenu()
+{
+    $('.btn__menu').on('click', function() {
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('header .mobile__menu').removeClass('active');
+            $('body').removeClass('lock')
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('header .mobile__menu').addClass('active');
+            $('body').addClass('lock')
+        }
+    })
 }

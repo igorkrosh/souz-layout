@@ -36,9 +36,26 @@ mixin Navbar()
                     span 
                         +ContactPhone()
                 button.btn Обратная связь
+                +BtnMenu()
         .menu__wrapper
             .container
                 +Menu()
+        .mobile__menu
+            .container
+                .search__form
+                    input(type="text" placeholder="Поиск по сайту...")
+                +Menu()
+                .row
+                    .soc__wrapper
+                        a(href="#").inst
+                        a(href="#").vk
+                    a(href="#").how__to__get 
+                        span Как добраться
+                .schedule
+                    span Ежедневно: 9:00 – 20:00
+                    span 
+                        +ContactPhone()
+                
 
 mixin ContactPhone()
     |+7 (8313) 13-55-65
