@@ -9,6 +9,11 @@
     {
         background-position-x: 60%;
     }
+
+    section.sale .sale__wrapper
+    {
+        width: 860px;
+    }
 }
 
 @media(max-width: 1024px)
@@ -182,7 +187,10 @@
         font-size: 17px;
     }
 
-
+    section.sale .sale__wrapper
+    {
+        width: 570px;
+    }
 }
 
 @media(max-width: 768px)
@@ -270,6 +278,21 @@
     footer .copyright
     {
         text-align: center;
+    }
+
+    section.sale .sale__wrapper
+    {
+        width: 290px;
+    }
+
+    .modal .preview
+    {
+        height: 140px;
+    }
+
+    .modal .phone
+    {
+        font-size: 11px;
     }
 }
 

@@ -7,4 +7,29 @@ mixin Modal(id, modalTemplate)
 
 mixin ModalTemplate
     h1 ModalTemplate
-    
+
+mixin ModalSale
+    .preview
+        img.bg(src="assets/images/sales/avon2.jpg", alt="")
+        .place
+            .floor 2 этаж
+            .building Новое здание
+        .row
+            .modal__title AVON
+            .soc__wrapper
+                a(href="#").inst
+                a(href="#").vk
+    .text.cke_wrapper
+        p 
+            |Лучшие весенние подарки в дополнительном каталоге Avon. Восхитительные ароматы — обрати внимание на цветочно-мускусную новинку Pur Blanca Essence.
+            |Любимые крема и маски, подарочные наборы для лица и тела, стильные аксессуары и, конечно, декоративная косметика — куда же без нее!
+            |И все это по специальным праздничным ценам. Подарки для себя любимой, мамы, начальницы и подружек ты найдешь
+            |в онлайн-каталоге по ссылке: 
+            a(href="") https://my.avon.ru/onlinecatalog/202102/gifts/
+    .footer
+        .phone
+            a(href="#") +7 (123) 456-78-90
+            a(href="#") +7 (123) 456-78-90
+        .site
+            a(href="#") Посетить сайт
+
