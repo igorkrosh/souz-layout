@@ -7,6 +7,21 @@ function Core()
     InitOwlCarousel();
     InitSimpleLightbox();
     SetMobileMenu();
+
+    $('.building_switch .btn__tab').on('click', function() {
+        if ($(this).hasClass('active'))
+        {
+            SwitchTab('old')
+            $(this).removeClass('active')
+            $(this).text('Старое здание')
+        }
+        else
+        {
+            SwitchTab('new')
+            $(this).addClass('active')
+            $(this).text('Новое здание')
+        }
+    })
 }
 
 function SetTabSwitcher()

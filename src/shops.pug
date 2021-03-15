@@ -1,0 +1,60 @@
+include pug/mixins.pug
+
+mixin SaleCardItem(img, title, desc)
+    .card__item(modal="modal-sale")
+        img(src=img, alt="").preview
+        .text
+            span.card__title=title
+            span.card__desc=desc
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Navbar()
+        section.shops
+            .container
+                h1.title Магазины
+                .btn__tab__wrapper
+                    .building_switch
+                        button.btn__tab.active Новое здание
+                    .tab_switch
+                        button.btn__tab.active -1 этаж
+                        button.btn__tab 1 этаж
+                        button.btn__tab 2 этаж
+                        button.btn__tab 3 этаж
+                        button.btn__tab 4 этаж
+                .tab__viewer
+                    .tab.active(tab-name="new")
+                        .justify
+                            .cards__wrapper
+                                +SaleCardItem('assets/images/sales/avon.png', 'NEW', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/office_planet.png', 'Офисная планета', 'Конкурс от магазина')
+                                +SaleCardItem('assets/images/sales/asd.png', 'ТЦ «Союз»', 'Конкурс рисунков')
+                                +SaleCardItem('assets/images/sales/mouse.png', 'Перекресток', 'Встречайте Микки и Минни Маус во всех супермаркетах «Перекрёсток»')
+                                +SaleCardItem('assets/images/sales/avon.png', 'Avon', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/avon.png', 'Avon', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/office_planet.png', 'Офисная планета', 'Конкурс от магазина')
+                                +SaleCardItem('assets/images/sales/asd.png', 'ТЦ «Союз»', 'Конкурс рисунков')
+                                +SaleCardItem('assets/images/sales/mouse.png', 'Перекресток', 'Встречайте Микки и Минни Маус во всех супермаркетах «Перекрёсток»')
+                    .tab(tab-name="old")
+                        .justify
+                            .cards__wrapper
+                                +SaleCardItem('assets/images/sales/avon.png', 'OLD', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/office_planet.png', 'Офисная планета', 'Конкурс от магазина')
+                                +SaleCardItem('assets/images/sales/asd.png', 'ТЦ «Союз»', 'Конкурс рисунков')
+                                +SaleCardItem('assets/images/sales/mouse.png', 'Перекресток', 'Встречайте Микки и Минни Маус во всех супермаркетах «Перекрёсток»')
+                                +SaleCardItem('assets/images/sales/avon.png', 'Avon', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/avon.png', 'Avon', 'Лучшие весенние подарки в дополнительном каталоге Avon')
+                                +SaleCardItem('assets/images/sales/office_planet.png', 'Офисная планета', 'Конкурс от магазина')
+                                +SaleCardItem('assets/images/sales/asd.png', 'ТЦ «Союз»', 'Конкурс рисунков')
+                                +SaleCardItem('assets/images/sales/mouse.png', 'Перекресток', 'Встречайте Микки и Минни Маус во всех супермаркетах «Перекрёсток»')
+        +Modal('modal-sale', 'ModalSale')           
+        +Footer()
+            
+        include pug/scripts.pug

@@ -692,17 +692,17 @@ section.sale
         text-align: center;
     }
 
-    .sale__wrapper
-    {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .justify
     {
         display: flex;
         justify-content: center;
     }
+}
+
+.cards__wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card__item
@@ -1442,6 +1442,30 @@ section.about__complex
         }
     }
 
+}
+
+section.shops
+{
+    .btn__tab__wrapper
+    {
+        display: flex;
+        justify-content: space-between;
+
+        .tab_switch
+        {
+            transform: translateX(-15%);
+        }
+
+        .building_switch .btn__tab
+        {
+            width: 175px;
+        }
+    }
+
+    .btn__tab__wrapper:after
+    {
+        content: '';
+    }
 }
 
 @import 'responce';
