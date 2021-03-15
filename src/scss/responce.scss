@@ -10,7 +10,7 @@
         background-position-x: 60%;
     }
 
-    section.sale .cards__wrapper
+    .cards__wrapper
     {
         width: 860px;
     }
@@ -203,7 +203,7 @@
         font-size: 17px;
     }
 
-    section.sale .cards__wrapper
+    .cards__wrapper
     {
         width: 570px;
     }
@@ -259,6 +259,18 @@
     section.about__complex .history__part, section.about__complex .new__part
     {
         padding-top: 60px;
+    }
+
+    section.shops .btn__tab__wrapper
+    {
+        flex-direction: column;
+    }
+
+    section.shops .btn__tab__wrapper .tab_switch
+    {
+        transform: translateX(0);
+        margin-top: 20px;
+        text-align: center;
     }
 }
 
@@ -349,7 +361,7 @@
         text-align: center;
     }
 
-    section.sale .cards__wrapper
+    .cards__wrapper
     {
         width: 290px;
     }
@@ -494,5 +506,10 @@
     section.souz .container .col:nth-child(1)
     {
         padding: 40px 40px 0 40px;
+    }
+
+    section.shops .btn__tab__wrapper .btn__tab
+    {
+        margin: 5px;
     }
 }

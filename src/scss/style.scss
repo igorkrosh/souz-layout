@@ -691,14 +691,13 @@ section.sale
     {
         text-align: center;
     }
-
-    .justify
-    {
-        display: flex;
-        justify-content: center;
-    }
 }
 
+.justify
+{
+    display: flex;
+    justify-content: center;
+}
 .cards__wrapper
 {
     display: flex;
@@ -1446,6 +1445,8 @@ section.about__complex
 
 section.shops
 {
+    padding-bottom: 60px;
+
     .btn__tab__wrapper
     {
         display: flex;
@@ -1472,6 +1473,11 @@ section.shops
 {
     justify-content: center;
     margin-bottom: 30px;
+}
+
+section.services
+{
+    padding-bottom: 60px;
 }
 
 @import 'responce';
