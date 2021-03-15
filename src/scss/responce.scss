@@ -14,6 +14,11 @@
     {
         width: 860px;
     }
+
+    section.tenants .statistics__wrapper .statistics__item
+    {
+        width: 475px;
+    }
 }
 
 @media(max-width: 1024px)
@@ -31,6 +36,12 @@
     .container.navbar .col
     {
         width: 375px;
+    }
+
+    section.tenants .statistics__wrapper .statistics__item
+    {
+        width: 450px;
+        padding: 0 50px;
     }
 }
 
@@ -191,6 +202,22 @@
     {
         width: 570px;
     }
+
+    section.tenants .statistics__wrapper .statistics__item
+    {
+        width: 340px;
+        padding: 0 20px;
+    }
+
+    section.callback .form__wrapper
+    {
+        width: 340px;
+    }
+
+    section.callback .contacts__info
+    {
+        width: 275px;
+    }
 }
 
 @media(max-width: 768px)
@@ -294,6 +321,22 @@
     {
         font-size: 11px;
     }
+
+    section.tenants .statistics__wrapper .statistics__item
+    {
+        width: 100%;
+        padding: 0 80px;
+    }
+
+    section.callback .container
+    {
+        flex-direction: column;
+    }
+
+    section.callback .form__wrapper
+    {
+        margin-bottom: 60px;
+    }
 }
 
 @media(max-width: 576px)
@@ -330,5 +373,21 @@
     section.slider .slider__item
     {
         min-height: 330px;
+    }
+
+    section.tenants .statistics__wrapper .statistics__item
+    {
+        padding: 15px;
+    }
+
+    section.callback .form__wrapper
+    {
+        width: 100%;
+    }
+
+    section.callback .form__wrapper .form__file label
+    {
+        font-size: 13px;
+        padding-left: 18px;
     }
 }

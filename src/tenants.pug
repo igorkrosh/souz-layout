@@ -1,0 +1,79 @@
+include pug/mixins.pug
+
+mixin SaleCardItem(img, title, desc)
+    .card__item(modal="modal-sale")
+        img(src=img, alt="").preview
+        .text
+            span.card__title=title
+            span.card__desc=desc
+
+
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Navbar()
+        section.tenants
+            .container
+                h1.title Арендаторам
+                .statistics__wrapper
+                    .statistics__item.population
+                        .text
+                            span.item__title 250 000
+                            span.item__subtitle Население г. Дзержинск
+                    .statistics__item.area
+                        .text
+                            span.item__title 12 000 кв. м
+                            span.item__subtitle Общая площадь
+                    .statistics__item.area__arenda
+                        .text
+                            span.item__title 10 000 кв. м
+                            span.item__subtitle Арендуемая площадь
+                    .statistics__item.visitors
+                        .text
+                            span.item__title от 7 000
+                            span.item__subtitle Посетителей в день
+                .cke_wrapper
+                    p В торговом центре предусмотрена зона для погрузочно-разгрузочных работ.
+                    p Семейный торговый центр «СОЮЗ» находится на первой линии проспекта Циолковского, на пересечении важнейшего проспекта города и центральных улиц, в центре города с наибольшей плотностью населения и развитой инфраструктурой.
+                    p СТЦ имеет отличную транспортную доступность и обладает высоким пешеходным и автомобильным трафиком.
+                    p Рядом с СТЦ находится ж/д станция пригородного и дальнего следования. В радиусе 500 метров функционирует ФОК, 3 школы, поликлиника, главный храмовый комплекс, Пенсионный фонд и несколько крупных банков.
+        section.callback
+            .container
+                h1.title Заявка на аренду
+            .container 
+                form.form__wrapper
+                    input(type="text" placeholder="Название бренда")
+                    input(type="text" placeholder="Категория бренда")
+                    input(type="text" placeholder="Необходимая площадь")
+                    input(type="text" placeholder="Сайт")
+                    input(type="text" placeholder="Контактное лицо")
+                    input(type="text" placeholder="Телефон")
+                    input(type="text" placeholder="E-mail")
+                    .form__footer
+                        .form__file
+                            label(for="inputFile") Прикрепить файл
+                            input(type="file" name="inputFile")#inputFile
+                        button.btn.orange Отправить
+                .contacts__info
+                    .contact
+                        span Отдел аренды
+                        a(href="mailto:mail@souz.ru") mail@souz.ru
+                    .contact
+                        span ЦБУ «Самолёт»
+                        a(href="mailto:samolet@souz.ru") samolet@souz.ru
+                    .contact
+                        span Контактный телефон
+                        a(href="tel:00000") 
+                            +ContactPhone()
+                    .btn__wrapper
+                        a(target="_blank" href="https://gepardnn.ru/sojuz/").btn.orange Площади в аренду
+        +Footer()
+            
+        include pug/scripts.pug
