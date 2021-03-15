@@ -1,0 +1,68 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Navbar()
+
+        section.souz
+            .container
+                .col
+                    img(src="assets/images/logo_big.png", alt="")
+                .col
+                    .text
+                        p Семейный торговый центр «СОЮЗ» общей площадью 12300 кв.м в г. Дзержинск Нижегородской области
+        section.about__complex
+            .container
+                h1.title.black Торговый центр состоит из 2-х частей:
+                .wrapper
+                    .history__part
+                        span.item__title Историческая часть СТЦ «СОЮЗ»
+                        span.text Построена и введена в эксплуатацию в 1999 году. Здание состоит из 8 этажей, включая цоколь. 3 этажа здания занимают торговые площади, остальные 5 этажей имеют административное назначение. Общая площадь первой очереди СТЦ составляет 6250 кв.м.
+                    .new__part
+                        span.item__title Новая часть СТЦ «СОЮЗ»
+                        span.text Представляет собой 6-ти этажное здание с подвалом, примыкающее к торцевому фасаду исторической части СТЦ. Новая часть здания была запущена в эксплуатацию в 2015 году. Общая площадь здания составила 6050 кв м + 200 кв.м открытых балконов с эксплуатируемой кровлей.
+                h1.title.sm В торговом комплексе установлены современные виды инженерных систем:
+                .slider__wrapper
+                    .engineering__systems.owl-carousel
+                        .item
+                            img(src="assets/images/engineering_systems/5.png", alt="")
+                            span Система водяного отопления
+                        .item
+                            img(src="assets/images/engineering_systems/1.png", alt="")
+                            span Система противопожарной приточно-вытяжной вентиляции
+                        .item
+                            img(src="assets/images/engineering_systems/2.png", alt="")
+                            span Система дымоудаления
+                        .item
+                            img(src="assets/images/engineering_systems/3.png", alt="")
+                            span Система автоматического пожаротушения
+                        .item
+                            img(src="assets/images/engineering_systems/4.png", alt="")
+                            span Система пожарной сигнализации и СОУЭ
+                    .slider__nav
+                .text__block
+                    .text.cke_wrapper
+                        p Также в торговом центре предусмотрена зона для погрузочно-разгрузочных работ.
+                        p Семейный торговый центр «СОЮЗ» находится на первой линии проспекта Циолковского, на пересечении важнейшего проспекта города и центральных улиц, в центре города с наибольшей плотностью населения и развитой инфраструктурой.
+                        p СТЦ имеет отличную транспортную доступность и обладает высоким пешеходным и автомобильным трафиком.
+                        p Рядом с СТЦ находится ж/д станция пригородного и дальнего следования. В радиусе 500 метров функционирует ФОК, 3 школы, поликлиника, главный храмовый комплекс, Пенсионный фонд и несколько крупных банков.
+                    .images__col
+                        a(href="assets/images/about/1.jpg").images__item
+                            img(src="assets/images/about/1.jpg", alt="").bg 
+                        a(href="assets/images/about/2.jpg").images__item
+                            img(src="assets/images/about/2.jpg", alt="").bg 
+                        a(href="assets/images/about/3.jpg").images__item
+                            img(src="assets/images/about/3.jpg", alt="").bg 
+
+
+
+        +Footer()
+            
+        include pug/scripts.pug

@@ -5,6 +5,7 @@ function Core()
     SetTabSwitcher();
     SetModal();
     InitOwlCarousel();
+    InitSimpleLightbox();
     SetMobileMenu();
 }
 
@@ -105,9 +106,54 @@ function InitOwlCarousel()
         items: 1,
         nav:true,
         dots: true,
+        loop: true,
+        autoplay: true,
         navContainer: '.slider__nav .nav',
         dotsContainer: '.slider__nav .dots'
     });
+
+    $('.engineering__systems.owl-carousel').owlCarousel({
+        items: 3,
+        loop: true,
+        center: true,
+        autoWidth: true,
+        navContainer: 'section.about__complex .slider__nav',
+        nav:true,
+        responsive: {
+            992: {
+                items: 3,
+            },
+            756: {
+                items: 3,
+                center: false,
+                autoWidth: false,
+            },
+            576: {
+                items: 2,
+                center: false,
+                autoWidth: false,
+            },
+            0: {
+                items: 1,
+                center: false,
+                autoWidth: false,
+            }
+        },
+        onInitialized: function()
+        {
+            $('.color').removeClass('color');
+            $('.engineering__systems.owl-carousel .owl-item.center').prev().addClass('color');
+            $('.engineering__systems.owl-carousel .owl-item.center').addClass('color')
+            $('.engineering__systems.owl-carousel .owl-item.center').next().addClass('color')
+        },
+        onTranslated: function() 
+        {
+            $('.color').removeClass('color');
+            $('.engineering__systems.owl-carousel .owl-item.center').prev().addClass('color');
+            $('.engineering__systems.owl-carousel .owl-item.center').addClass('color')
+            $('.engineering__systems.owl-carousel .owl-item.center').next().addClass('color')
+        }
+    })
 }
 
 function SetMobileMenu()
@@ -126,4 +172,9 @@ function SetMobileMenu()
             $('body').addClass('lock')
         }
     })
+}
+
+function InitSimpleLightbox()
+{
+    $('section.about__complex .images__col a').simpleLightbox();
 }
