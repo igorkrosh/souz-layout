@@ -33,3 +33,34 @@ mixin ModalSale
         .site
             a(href="#") Посетить сайт
 
+mixin ModalShop
+    .preview
+        img.bg(src="assets/images/sales/avon2.jpg", alt="")
+        .place
+            .floor 2 этаж
+            .building Новое здание
+        .row
+            .modal__title AVON
+            .soc__wrapper
+                a(href="#").inst
+                a(href="#").vk
+    .text.cke_wrapper
+        p 
+            |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa excepturi eius in nihil vitae itaque, illum blanditiis sapiente expedita quo eligendi magni sed odit eaque culpa ducimus omnis fugiat odio.
+    .graphic
+        +Day('ПН', '10:00', '22:00')
+        +Day('ВТ', '10:00', '22:00')
+        +Day('СР', '10:00', '22:00')
+        +Day('ЧТ', '10:00', '22:00')
+        +Day('ПТ', '10:00', '22:00')
+        +Day('СБ', '10:00', '22:00')
+        +Day('ВС', '10:00', '22:00')
+    .footer
+        .phone
+            a(href="#") +7 (123) 456-78-90
+            a(href="#") +7 (123) 456-78-90
+        .site
+            a(href="#") Посетить сайт
+
+
+
