@@ -1,5 +1,13 @@
 include pug/mixins.pug
 
+mixin GridItem(title, subtitle, img, name, link=false)
+    a(href="#" class=name).grid__item
+        img(src=img, alt="").bg
+        span.item__title=title
+        span.item__subtitle=subtitle
+        -if(link)
+            button(href="#").btn.orange Подробнее
+
 doctype html
 html(lang="ru")
     head
@@ -43,31 +51,14 @@ html(lang="ru")
         section.souz__grid
             .container
                 .grid__wrapper
-                    a(href="#").grid__item.shops
-                        span.item__title Магазины
-                        span.item__subtitle Более 50 брендов
-                    a(href="#").grid__item.sale
-                        span.item__title Акции
-                        span.item__subtitle Главные распродажи нашего ТЦ
-                        button(href="#").btn.orange Подробнее
-                    a(href="#").grid__item.hot__to__get
-                        span.item__title Как добраться?
-                        span.item__subtitle Очень просто!
-                    a(href="#").grid__item.services
-                        span.item__title Услуги
-                        span.item__subtitle Современный ТЦ к Вашему вниманию
-                    a(href="#").grid__item.about__us
-                        span.item__title О нас
-                        span.item__subtitle Мы открыты для Вас
-                    a(href="#").grid__item.airplane
-                        span.item__title ЦБУ «Самолёт»
-                        span.item__subtitle Идеально подойдёт под все виды бытовых услуг
-                    a(href="#").grid__item.news
-                        span.item__title Новости
-                        span.item__subtitle Будьте в курсе последних событий!
-                    a(href="#").grid__item.call
-                        span.item__title Обратная связь
-                        span.item__subtitle Давайте общаться!
+                    +GridItem('Магазины', 'Более 50 брендов', 'assets/images/mainpage_grid/1.jpg', 'shops')
+                    +GridItem('Акции', 'Главные распродажи нашего ТЦ', 'assets/images/mainpage_grid/2.jpg', 'sale', true)
+                    +GridItem('Как добраться?', 'Очень просто!', 'assets/images/mainpage_grid/3.jpg', 'hot__to__get')
+                    +GridItem('Услуги', 'Современный ТЦ к Вашему вниманию', 'assets/images/mainpage_grid/4.jpg', 'services')
+                    +GridItem('О нас', 'Мы открыты для Вас', 'assets/images/mainpage_grid/5.jpg', 'about__us')
+                    +GridItem('ЦБУ «Самолёт»', 'Идеально подойдёт под все виды бытовых услуг', 'assets/images/mainpage_grid/6.jpg', 'airplane')
+                    +GridItem('Новости', 'Будьте в курсе последних событий!', 'assets/images/mainpage_grid/7.jpg', 'news')
+                    +GridItem('Обратная связь', 'Давайте общаться!', 'assets/images/mainpage_grid/8.jpg', 'call')
         +Footer()
             
         include pug/scripts.pug
