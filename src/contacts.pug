@@ -1,0 +1,62 @@
+include pug/mixins.pug
+
+mixin Day(day, from, to)
+    .day
+        span=day
+        span=from
+        span=to
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Navbar()
+        section.contacts
+            .container
+                h1.title Контакты
+                .contacts__wrapper
+                    .contacts
+                        span.item__title Адрес
+                        span.value г.Дзержинск, <br> пр-т Циолковского, 76
+                        a(href="#").how__to__get 
+                            span Как добраться
+                    .contacts
+                        span.item__title Телефоны
+                        a(href="#").value 
+                            +ContactPhone()
+                    .contacts
+                        span.item__title График работы
+                        .graphic
+                            +Day('ПН', '10:00', '22:00')
+                            +Day('ВТ', '10:00', '22:00')
+                            +Day('СР', '10:00', '22:00')
+                            +Day('ЧТ', '10:00', '22:00')
+                            +Day('ПТ', '10:00', '22:00')
+                            +Day('СБ', '10:00', '22:00')
+                            +Day('ВС', '10:00', '22:00')
+        section.ymap
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c3acf0df84ae6469f7379f3fa66fb88c947e25782b4808ab92eb12858c7e362&amp;width=100%25&amp;height=440&amp;lang=ru_RU&amp;scroll=false"></script>
+        section.department__contacts
+            .container
+                h1.title.left Контакты отделов
+                .contacts
+                    .name По вопросам аренды торговых площадей 
+                    .department Менеджер по аренде
+                    .tel__wrapper
+                        .tel +7(951)906-48-73
+                .contacts
+                    .name По вопросам работы торгового центра:
+                    .department Администратор СТЦ Союз
+                    .tel__wrapper
+                        .tel +7(963)230-55-65
+                        .tel 213-55-65
+                
+
+        +Footer()
+            
+        include pug/scripts.pug

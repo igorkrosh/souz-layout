@@ -337,6 +337,32 @@
     {
         margin-bottom: 60px;
     }
+
+    section.contacts .contacts__wrapper
+    {
+        flex-direction: column;
+    }
+
+    section.contacts .contacts__wrapper .contacts
+    {
+        margin-bottom: 40px;
+    }
+
+    section.department__contacts .contacts
+    {
+        flex-direction: column;
+    }
+
+    section.department__contacts .contacts .tel__wrapper
+    {
+        width: 60%;
+    }
+
+    section.department__contacts .contacts .department
+    {
+        width: 60%;
+        margin: 15px 0;
+    }
 }
 
 @media(max-width: 576px)
@@ -389,5 +415,11 @@
     {
         font-size: 13px;
         padding-left: 18px;
+    }
+
+    .graphic
+    {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
