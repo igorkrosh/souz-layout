@@ -1,12 +1,11 @@
 include pug/mixins.pug
 
-mixin GridItem(title, subtitle, img, name, link=false)
+mixin GridItem(title, subtitle, img, name)
     a(href="#" class=name).grid__item
         img(src=img, alt="").bg
         span.item__title=title
         span.item__subtitle=subtitle
-        -if(link)
-            button(href="#").btn.orange Подробнее
+        button(href="#").btn.orange Подробнее
 
 doctype html
 html(lang="ru")
@@ -52,7 +51,7 @@ html(lang="ru")
             .container
                 .grid__wrapper
                     +GridItem('Магазины', 'Более 50 брендов', 'assets/images/mainpage_grid/1.jpg', 'shops')
-                    +GridItem('Акции', 'Главные распродажи нашего ТЦ', 'assets/images/mainpage_grid/2.jpg', 'sale', true)
+                    +GridItem('Акции', 'Главные распродажи нашего ТЦ', 'assets/images/mainpage_grid/2.jpg', 'sale')
                     +GridItem('Как добраться?', 'Очень просто!', 'assets/images/mainpage_grid/3.jpg', 'hot__to__get')
                     +GridItem('Услуги', 'Современный ТЦ к Вашему вниманию', 'assets/images/mainpage_grid/4.jpg', 'services')
                     +GridItem('О нас', 'Мы открыты для Вас', 'assets/images/mainpage_grid/5.jpg', 'about__us')
