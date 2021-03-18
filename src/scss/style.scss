@@ -304,7 +304,7 @@ header .menu__wrapper
             transition: 0.5s;
         }
 
-        a:hover, a.active
+        a:hover, .active a
         {
             color: #f6d973;
         }
@@ -436,6 +436,7 @@ section.souz__grid
         overflow: hidden;
         padding: 40px 30px;
         position: relative;
+        word-break: break-word;
 
         .item__title
         {
@@ -692,6 +693,7 @@ section.sale
 {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .card__item
@@ -1468,6 +1470,11 @@ section.shops
 section.services
 {
     padding-bottom: 60px;
+}
+
+section.shops, section.services, section.sale, section.news
+{
+    min-height: 700px;
 }
 
 @import 'responce';
