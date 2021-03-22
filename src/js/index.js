@@ -50,8 +50,9 @@ function SwitchTab(target)
 
 function SetModal()
 {
-    $('[modal]').on('click', function()
+    $('[modal]').on('click', function(e)
     {
+        e.preventDefault();
         let modalId = $(this).attr('modal');
         ShowModal(`#${modalId}`);
     });

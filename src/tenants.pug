@@ -39,37 +39,40 @@ html(lang="ru")
                         .text
                             span.item__title от 7 000
                             span.item__subtitle Посетителей в день
-                .cke_wrapper
-                    p В торговом центре предусмотрена зона для погрузочно-разгрузочных работ.
-                    p Семейный торговый центр «СОЮЗ» находится на первой линии проспекта Циолковского, на пересечении важнейшего проспекта города и центральных улиц, в центре города с наибольшей плотностью населения и развитой инфраструктурой.
-                    p СТЦ имеет отличную транспортную доступность и обладает высоким пешеходным и автомобильным трафиком.
-                    p Рядом с СТЦ находится ж/д станция пригородного и дальнего следования. В радиусе 500 метров функционирует ФОК, 3 школы, поликлиника, главный храмовый комплекс, Пенсионный фонд и несколько крупных банков.
+                .wrapper
+                    .cke_wrapper
+                        p В торговом центре предусмотрена зона для погрузочно-разгрузочных работ.
+                        p Семейный торговый центр «СОЮЗ» находится на первой линии проспекта Циолковского, на пересечении важнейшего проспекта города и центральных улиц, в центре города с наибольшей плотностью населения и развитой инфраструктурой.
+                        p СТЦ имеет отличную транспортную доступность и обладает высоким пешеходным и автомобильным трафиком.
+                        p Рядом с СТЦ находится ж/д станция пригородного и дальнего следования. В радиусе 500 метров функционирует ФОК, 3 школы, поликлиника, главный храмовый комплекс, Пенсионный фонд и несколько крупных банков.
+                    form.form__wrapper
+                        h1.title.left Заявка на аренду
+                        input(type="text" placeholder="Название бренда")
+                        input(type="text" placeholder="Категория бренда")
+                        input(type="text" placeholder="Необходимая площадь")
+                        input(type="text" placeholder="Сайт")
+                        input(type="text" placeholder="Контактное лицо")
+                        input(type="text" placeholder="Телефон")
+                        input(type="text" placeholder="E-mail")
+                        .form__footer
+                            .form__file
+                                label(for="inputFile") Прикрепить файл
+                                input(type="file" name="inputFile")#inputFile
+                            button.btn.orange Отправить
         section.callback
             .container
-                h1.title Заявка на аренду
+                
             .container 
-                form.form__wrapper
-                    input(type="text" placeholder="Название бренда")
-                    input(type="text" placeholder="Категория бренда")
-                    input(type="text" placeholder="Необходимая площадь")
-                    input(type="text" placeholder="Сайт")
-                    input(type="text" placeholder="Контактное лицо")
-                    input(type="text" placeholder="Телефон")
-                    input(type="text" placeholder="E-mail")
-                    .form__footer
-                        .form__file
-                            label(for="inputFile") Прикрепить файл
-                            input(type="file" name="inputFile")#inputFile
-                        button.btn.orange Отправить
+                
                 .contacts__info
                     .contact
-                        span Отдел аренды
+                        span Отдел аренды:
                         a(href="mailto:mail@souz.ru") mail@souz.ru
                     .contact
-                        span ЦБУ «Самолёт»
+                        span ЦБУ «Самолёт»:
                         a(href="mailto:samolet@souz.ru") samolet@souz.ru
                     .contact
-                        span Контактный телефон
+                        span Контактный телефон:
                         a(href="tel:00000") 
                             +ContactPhone()
                     .btn__wrapper

@@ -35,7 +35,7 @@ mixin Navbar()
                     span Ежедневно: 9:00 – 20:00
                     span 
                         +ContactPhone()
-                button.btn Обратная связь
+                button.btn(modal="modalContacts") Обратная связь
                 +BtnMenu()
         .menu__wrapper
             .container
@@ -55,6 +55,7 @@ mixin Navbar()
                     span Ежедневно: 9:00 – 20:00
                     span 
                         +ContactPhone()
+    +Modal('modalContacts', 'ModalContacts')
                 
 
 mixin ContactPhone()

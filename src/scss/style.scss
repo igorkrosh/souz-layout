@@ -1023,12 +1023,20 @@ section.tenants
 
     .cke_wrapper
     {
-        text-align: center;
+        width: 60%;
+        padding-right: 50px;
+        text-align: left;
 
         p
         {
             margin-bottom: 35px;
         }
+    }
+
+    .wrapper
+    {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -1043,71 +1051,12 @@ section.callback
         margin-bottom: 20px;
     }
 
-    .form__wrapper
-    {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-
-        input
-        {
-            height: 35px;
-            margin-bottom: 15px;
-            border: none;
-            border-bottom: 1px solid #000;
-            font-size: 16px;
-            font-family: "CenturyGothic";
-        }
-
-        input::placeholder
-        {
-            color: #000;
-        }
-
-        .form__file
-        {
-            input
-            {
-                display: none;
-            }
-
-            label
-            {
-                padding-left: 25px;
-                color: #264e9d;
-                position: relative;
-                cursor: pointer;
-            }
-
-            label:after
-            {
-                content: '';
-                position: absolute;
-                width: 15px;
-                height: 18px;
-                background: url(../images/icons/file.png);
-                left: 0;
-                top: 0;
-                bottom: 0;
-                margin-top: auto;
-                margin-bottom: auto;
-            }
-        }
-
-        .form__footer
-        {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
-
     .contacts__info
     {
-        width: 380px;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         background-color: #f1f1f1;
         padding: 40px;
         border-radius: 15px;
@@ -1115,8 +1064,6 @@ section.callback
         .contact
         {
             display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
 
             a[href^="tel:"]
             {
@@ -1128,8 +1075,78 @@ section.callback
             {
                 color: #264e9d;
             }
+
+            span
+            {
+                margin-right: 10px;
+            }
         }
     }
+}
+
+.form__wrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    input
+    {
+        height: 35px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 16px;
+        font-family: "CenturyGothic";
+    }
+
+    input::placeholder
+    {
+        color: #000;
+    }
+
+    .form__file
+    {
+        input
+        {
+            display: none;
+        }
+
+        label
+        {
+            padding-left: 25px;
+            color: #264e9d;
+            position: relative;
+            cursor: pointer;
+        }
+
+        label:after
+        {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 18px;
+            background: url(../images/icons/file.png);
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    .form__footer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.modal .form__wrapper
+{
+    padding: 30px;
+    margin: auto;
 }
 
 section.contacts

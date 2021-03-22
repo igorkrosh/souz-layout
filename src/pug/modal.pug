@@ -63,4 +63,18 @@ mixin ModalShop
             a(href="#") Посетить сайт
 
 
-
+mixin ModalContacts
+    h1.title Заявка на аренду
+    form.form__wrapper
+        input(type="text" placeholder="Название бренда")
+        input(type="text" placeholder="Категория бренда")
+        input(type="text" placeholder="Необходимая площадь")
+        input(type="text" placeholder="Сайт")
+        input(type="text" placeholder="Контактное лицо")
+        input(type="text" placeholder="Телефон")
+        input(type="text" placeholder="E-mail")
+        .form__footer
+            .form__file
+                label(for="inputFile") Прикрепить файл
+                input(type="file" name="inputFile")#inputFile
+            button.btn.orange Отправить
